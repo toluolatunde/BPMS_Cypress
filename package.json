@@ -1,0 +1,27 @@
+{
+  "name": "automatebpms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "bpmsTests": "npm run test -- --spec \"cypress/integration/bpmsTests/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toluolatunde/BPMS_CypressAutomation.git"
+  },
+  "author": "Tolu Olatunde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toluolatunde/BPMS_CypressAutomation/issues"
+  },
+  "homepage": "https://github.com/toluolatunde/BPMS_CypressAutomation#readme",
+  "devDependencies": {
+    "cypress": "^5.1.0",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1"
+  }
+}

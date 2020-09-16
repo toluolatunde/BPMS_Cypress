@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-16T02:00:24.578Z",
+    "end": "2020-09-16T02:01:05.136Z",
+    "duration": 40558,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "48f12363-5ace-48c1-b38d-b27c37dffb40",
+      "title": "",
+      "fullFile": "cypress\\integration\\bpmsTests\\login.js",
+      "file": "cypress\\integration\\bpmsTests\\login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2a21aa7b-26d5-4146-9dd1-b3dadc54b1cd",
+          "title": "Login Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can not login with invalid credentials Login",
+              "fullTitle": "Login Functionality User can not login with invalid credentials Login",
+              "timedOut": null,
+              "duration": 14249,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.getEmail().should('be.visible').type(this.data.wemail);\nlogin.getPassword().should('be.visible').type(this.data.wpassword);\nlogin.getPasswordEye().should('be.visible');\nlogin.getLoginBtn().click();\nlogin.getButtomAlert().should('have.text', 'Invalid email or password provided');\nlogin.getTopAlert().should('have.text', 'Invalid email or password provided');",
+              "err": {},
+              "uuid": "a9e60668-3b4d-4f8c-bd82-eb6f5e254fec",
+              "parentUUID": "2a21aa7b-26d5-4146-9dd1-b3dadc54b1cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can not login without email",
+              "fullTitle": "Login Functionality User can not login without email",
+              "timedOut": null,
+              "duration": 7441,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.getEmail().should('be.visible');\nlogin.getPassword().should('be.visible').type(this.data.wpassword);\nlogin.getPasswordEye().should('be.visible');\nlogin.getLoginBtn().click(); // Should be on a new URL which includes '/commands/actions'\ncy.url().should('include', '/login');",
+              "err": {},
+              "uuid": "c00c0923-a798-43e9-b883-35b57510f35d",
+              "parentUUID": "2a21aa7b-26d5-4146-9dd1-b3dadc54b1cd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can login with valid email",
+              "fullTitle": "Login Functionality User can login with valid email",
+              "timedOut": null,
+              "duration": 15113,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.validlogin();",
+              "err": {},
+              "uuid": "b22f7aa2-c6b5-4ba6-b93a-52ca0e2d720a",
+              "parentUUID": "2a21aa7b-26d5-4146-9dd1-b3dadc54b1cd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9e60668-3b4d-4f8c-bd82-eb6f5e254fec",
+            "c00c0923-a798-43e9-b883-35b57510f35d",
+            "b22f7aa2-c6b5-4ba6-b93a-52ca0e2d720a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
