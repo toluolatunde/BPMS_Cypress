@@ -28,12 +28,12 @@ getPasswordEye()
 
 getButtomAlert()
 {
-   return cy.get('li')
+   return cy.get('li').should('have.text', 'Invalid email or password provided')
 }
 
 getTopAlert()
 {
-   return cy.get('small')
+   return cy.get('small').should('have.text', 'Invalid email or password provided')
 }
 
 }
