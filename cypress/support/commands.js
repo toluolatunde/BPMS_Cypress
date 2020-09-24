@@ -21,6 +21,8 @@ Cypress.Commands.add("validlogin", () => {
     cy.get('.icon-show').should('be.visible')
     cy.get(':nth-child(4) > .btn').click()
     cy.get('.user-name').should('be.visible')
+    
+    Cypress.Cookies.preserveOnce('__session')
 
 })
 
